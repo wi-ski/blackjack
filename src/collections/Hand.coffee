@@ -10,6 +10,7 @@ class window.Hand extends Backbone.Collection
     @trigger('checkWin')
     # @maxScore()
     @last() 
+    console.log(@)
 
   hasAce: -> @reduce (memo, card) ->
     memo or card.get('value') is 1
@@ -34,9 +35,8 @@ class window.Hand extends Backbone.Collection
     if !@isDealer
       console.error "Please check hand assignments..."
     else
-      console.log("THIS BE LAST: ",@first())
       @first().flip()
-      @trigger('checkWin')
+      @trigger('checkStand')
   scores: ->
     # The scores are an array of potential scores.
     # Usually, that array contains one element. That is the only score.
