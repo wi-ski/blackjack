@@ -6,8 +6,8 @@ class window.AppView extends Backbone.View
     <button class="hit-button">Hit</button> <button class="stand-button">Stand</button>
     <span>Dealer Score: <%= dealer %></span>
     <span>Player: <%= player %></span>
-    <div class="player-hand-container"></div>
-    <div class="dealer-hand-container"></div>
+    <div class="player-hand-container hand"></div>
+    <div class="dealer-hand-container hand"></div>
   '
 
   events:
