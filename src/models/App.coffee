@@ -19,6 +19,7 @@ class window.App extends Backbone.Model
     @get('dealerHand').scores();
 
   win:(person)->
+    @trigger('loading')
     @trigger('disableButtons')
     @set( person+'Wins', (@get person+'Wins')+1) 
 
